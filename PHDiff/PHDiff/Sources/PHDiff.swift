@@ -22,47 +22,7 @@ public struct PHDiff {
      - returns: the steps.
      */
     public static func steps<T: Diffable>(fromArray: [T], toArray: [T]) -> [DiffStep<T>] {
-        // Creates and setups one context.
-        let context = DiffContext<T>(fromArray: fromArray, toArray: toArray)
-
-        var steps: [DiffStep<T>] = []
-        var deleteOffsets = Array(repeating: 0, count: fromArray.count)
-        var runningOffset = 0
-
-        // Find deletions and incremement offset for each delete
-        for (j, ref) in context.OA.enumerated() {
-            deleteOffsets[j] = runningOffset
-            if ref.symbol != nil {
-                steps.append(.delete(value: context.fromArray[j], index: j))
-                runningOffset -= 1
-            }
-        }
-
-        runningOffset = 0
-
-        // Find inserts, moves and updates
-        for (i, ref) in context.NA.enumerated() {
-            if let j = ref.index {
-                // Check if this object has changed
-                if context.toArray[i] != context.fromArray[j] {
-                    steps.append(.update(value: context.toArray[i], index: i))
-                }
-
-                // Checks for the current offset, if matches means that this move is not needed
-                let expectedOldIndex = j + runningOffset + deleteOffsets[j]
-                if expectedOldIndex != i {
-                    steps.append(.move(value: context.toArray[i], fromIndex: j, toIndex: i))
-                    if expectedOldIndex > i {
-                        runningOffset += 1
-                    }
-                }
-            } else {
-                steps.append(.insert(value: context.toArray[i], index: i))
-                runningOffset += 1
-            }
-        }
-
-        return steps
+        return PaulHeckelDifference(between: fromArray, and: toArray)
     }
 
     /**
