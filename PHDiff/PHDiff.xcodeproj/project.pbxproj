@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8F3E7E901E1EE70300B045E1 /* UITableViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3E7E8F1E1EE70300B045E1 /* UITableViewExtensions.swift */; };
 		DEB4EC941DB3E63200FFA96B /* PHDiff.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEB4EC8A1DB3E63100FFA96B /* PHDiff.framework */; };
 		DEB4EC991DB3E63200FFA96B /* PHDiffTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB4EC981DB3E63200FFA96B /* PHDiffTests.swift */; };
 		DEB4EC9B1DB3E63200FFA96B /* PHDiff.h in Headers */ = {isa = PBXBuildFile; fileRef = DEB4EC8D1DB3E63100FFA96B /* PHDiff.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -29,6 +30,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8F3E7E8F1E1EE70300B045E1 /* UITableViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewExtensions.swift; sourceTree = "<group>"; };
 		DEB4EC8A1DB3E63100FFA96B /* PHDiff.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PHDiff.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEB4EC8D1DB3E63100FFA96B /* PHDiff.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PHDiff.h; sourceTree = "<group>"; };
 		DEB4EC8E1DB3E63100FFA96B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -62,6 +64,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8F3E7E8E1E1EE6EF00B045E1 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				8F3E7E8F1E1EE70300B045E1 /* UITableViewExtensions.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
 		DEB4EC801DB3E63100FFA96B = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +113,7 @@
 		DEB4ECA41DB3E6D300FFA96B /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				8F3E7E8E1E1EE6EF00B045E1 /* UIKit */,
 				DEB4ECA51DB3E6D300FFA96B /* ArrayExtensions.swift */,
 				DEB4ECA61DB3E6D300FFA96B /* Diffable.swift */,
 				DEB4ECA71DB3E6D300FFA96B /* PaulHeckelDifference.swift */,
@@ -230,6 +241,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F3E7E901E1EE70300B045E1 /* UITableViewExtensions.swift in Sources */,
 				DEB4ECAB1DB3E6D300FFA96B /* Diffable.swift in Sources */,
 				DEB4ECAC1DB3E6D300FFA96B /* PaulHeckelDifference.swift in Sources */,
 				DEB4ECAD1DB3E6D300FFA96B /* DiffStep.swift in Sources */,

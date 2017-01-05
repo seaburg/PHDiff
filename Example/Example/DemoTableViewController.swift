@@ -27,35 +27,11 @@ final class DemoTableViewController: UITableViewController {
 
     private func updateTableView(newColors: [DemoColor]) {
         let steps = newColors.difference(from: self.colors)
+        self.colors = newColors
 
-        if steps.count > 0 {
-            tableView.beginUpdates()
-            self.colors = newColors // update your model here
-
-            var insertions: [IndexPath] = []
-            var deletions: [IndexPath] = []
-            var reloads: [IndexPath] = []
-
-            steps.forEach { step in
-                switch step {
-                case let .insert(_, index):
-                    insertions.append(IndexPath(row: index, section: 0))
-                case let .delete(_, index):
-                    deletions.append(IndexPath(row: index, section: 0))
-                case let .move(_, fromIndex, toIndex):
-                    deletions.append(IndexPath(row: fromIndex, section: 0))
-                    insertions.append(IndexPath(row: toIndex, section: 0))
-                case let .update(_, index):
-                    reloads.append(IndexPath(row: index, section: 0))
-                }
-            }
-
-            tableView.insertRows(at: insertions, with: .automatic)
-            tableView.deleteRows(at: deletions, with: .automatic)
-            tableView.reloadRows(at: reloads, with: .automatic)
-            
-            tableView.endUpdates()
-        }
+        tableView.beginUpdates()
+        tableView.ph_updateSection(0, steps: steps)
+        tableView.endUpdates()
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
