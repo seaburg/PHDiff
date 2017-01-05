@@ -35,36 +35,6 @@ public struct PHDiff {
      - returns: the sorted steps.
      */
     public static func sortedSteps<T: Diffable>(fromArray: [T], toArray: [T]) -> [DiffStep<T>] {
-        var insertions: [DiffStep<T>] = []
-        var updates: [DiffStep<T>] = []
-        var indexedDeletions: [[DiffStep<T>]] = Array(repeating: [], count: fromArray.count)
-
-        let unsortedSteps = steps(fromArray: fromArray, toArray: toArray)
-
-        for step in unsortedSteps {
-            switch step {
-            case .insert:
-                insertions.append(step)
-
-            case let .delete(_, fromIndex):
-                indexedDeletions[fromIndex].append(step)
-
-            case let .move(value, fromIndex, toIndex):
-                // Convert Move to Insert + Delete
-                insertions.append(.insert(value: value, index: toIndex))
-                indexedDeletions[fromIndex].append(.delete(value: value, index: fromIndex))
-
-            case .update:
-                updates.append(step)
-            }
-        }
-
-        // Insertions need to be sorted asc, batchUpdates already does that.
-        // insertions.sort { $0.index < $1.index }
-
-        // Deletions need to be sorted desc.
-        let deletions = indexedDeletions.flatMap { $0.first }.reversed()
-
-        return deletions + insertions + updates
+        return PaulHeckelDifference(between: fromArray, and: toArray)
     }
 }
