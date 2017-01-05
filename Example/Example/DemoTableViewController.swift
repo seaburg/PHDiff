@@ -26,7 +26,7 @@ final class DemoTableViewController: UITableViewController {
     }
 
     private func updateTableView(newColors: [DemoColor]) {
-        let steps = PHDiff.steps(fromArray: self.colors, toArray: newColors)
+        let steps = newColors.difference(from: self.colors)
 
         if steps.count > 0 {
             tableView.beginUpdates()

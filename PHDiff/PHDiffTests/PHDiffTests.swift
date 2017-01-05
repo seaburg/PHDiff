@@ -18,62 +18,62 @@ final class PHDiffTests: XCTestCase {
 
         oldArray = ["a", "b", "c"]
         newArray = ["a", "b", "c"]
-        steps = PHDiff.sortedSteps(fromArray: oldArray, toArray: newArray)
+        steps = newArray.difference(from: oldArray)
         XCTAssertTrue(try! oldArray.apply(steps: steps) == newArray)
 
         oldArray = []
         newArray = ["a", "b", "c", "d", "e"]
-        steps = PHDiff.sortedSteps(fromArray: oldArray, toArray: newArray)
+        steps = newArray.difference(from: oldArray)
         XCTAssertTrue(try! oldArray.apply(steps: steps) == newArray)
 
         oldArray = ["a", "b", "c", "c", "c"]
         newArray = []
-        steps = PHDiff.sortedSteps(fromArray: oldArray, toArray: newArray)
+        steps = newArray.difference(from: oldArray)
         XCTAssertTrue(try! oldArray.apply(steps: steps) == newArray)
 
         oldArray = ["a", "b", "c", "c", "c"]
         newArray = ["e", "b", "c", "d", "a"]
-        steps = PHDiff.sortedSteps(fromArray: oldArray, toArray: newArray)
+        steps = newArray.difference(from: oldArray)
         XCTAssertTrue(try! oldArray.apply(steps: steps) == newArray)
 
         oldArray = ["p", "U", "b", "A", "5", "F"]
         newArray = ["O", "w", "Z", "U"]
-        steps = PHDiff.sortedSteps(fromArray: oldArray, toArray: newArray)
+        steps = newArray.difference(from: oldArray)
         XCTAssertTrue(try! oldArray.apply(steps: steps) == newArray)
 
         oldArray = ["p", "b", "U", "A", "5", "F"]
         newArray = ["O", "w", "Z", "U"]
-        steps = PHDiff.sortedSteps(fromArray: oldArray, toArray: newArray)
+        steps = newArray.difference(from: oldArray)
         XCTAssertTrue(try! oldArray.apply(steps: steps) == newArray)
 
         oldArray = ["x", "E", "g", "B", "f", "o", "3", "m"]
         newArray = ["j", "f", "L", "L", "m", "V", "g", "Q", "1"]
-        steps = PHDiff.sortedSteps(fromArray: oldArray, toArray: newArray)
+        steps = newArray.difference(from: oldArray)
         XCTAssertTrue(try! oldArray.apply(steps: steps) == newArray)
 
         oldArray = ["j", "E", "g", "B", "f", "o", "3", "m"]
         newArray = ["j", "f", "L", "L", "m", "V", "g", "Q", "1"]
-        steps = PHDiff.sortedSteps(fromArray: oldArray, toArray: newArray)
+        steps = newArray.difference(from: oldArray)
         XCTAssertTrue(try! oldArray.apply(steps: steps) == newArray)
 
         oldArray = ["a", "b", "c", "c", "c"]
         newArray = ["e", "b", "c", "d", "a"]
-        steps = PHDiff.sortedSteps(fromArray: oldArray, toArray: newArray)
+        steps = newArray.difference(from: oldArray)
         XCTAssertTrue(try! oldArray.apply(steps: steps) == newArray)
 
         oldArray = ["a", "b", "c"]
         newArray = ["b", "c", "c"]
-        steps = PHDiff.sortedSteps(fromArray: oldArray, toArray: newArray)
+        steps = newArray.difference(from: oldArray)
         XCTAssertEqual(steps, [ DiffStep.delete(value: "a", index: 0), DiffStep.insert(value: "c", index: 2) ])
 
         oldArray = ["a", "b", "c"]
         newArray = ["c", "a", "b"]
-        steps = PHDiff.steps(fromArray: oldArray, toArray: newArray)
+        steps = newArray.difference(from: oldArray)
         XCTAssertEqual(steps, [ DiffStep.move(value: "c", fromIndex: 2, toIndex: 0)])
 
         oldArray = ["a", "b", "c"]
         newArray = ["b", "c", "a"]
-        steps = PHDiff.steps(fromArray: oldArray, toArray: newArray)
+        steps = newArray.difference(from: oldArray)
         XCTAssertEqual(steps, [
             DiffStep.move(value: "b", fromIndex: 1, toIndex: 0),
             DiffStep.move(value: "c", fromIndex: 2, toIndex: 1),
@@ -174,7 +174,7 @@ final class PHDiffTests: XCTestCase {
 
         oldArray = [TestUser(name: "1", age: 0), TestUser(name: "2", age: 0)]
         newArray = [TestUser(name: "1", age: 0), TestUser(name: "2", age: 1)]
-        steps = PHDiff.sortedSteps(fromArray: oldArray, toArray: newArray)
+        steps = newArray.difference(from: oldArray)
         expectedSteps = [.update(value: TestUser(name: "2", age: 1), index: 1)]
         XCTAssertTrue(steps == expectedSteps)
         XCTAssertEqual(try! oldArray.apply(steps: steps), newArray, "simple update")
@@ -188,7 +188,7 @@ final class PHDiffTests: XCTestCase {
             let oldArray = randomArray(length: randomNumber(0..<500))
             let newArray = randomArray(length: randomNumber(0..<500))
 
-            let steps = PHDiff.sortedSteps(fromArray: oldArray, toArray: newArray)
+            let steps = newArray.difference(from: oldArray)
             XCTAssertEqual(try! oldArray.apply(steps: steps), newArray, "\noldArray = \(oldArray)\nnewArray = \(newArray)")
         }
     }
@@ -198,7 +198,7 @@ final class PHDiffTests: XCTestCase {
         let newArray = randomArray(length: 1000)
 
         self.measure {
-            let _ = PHDiff.sortedSteps(fromArray: oldArray, toArray: newArray)
+            let _ = newArray.difference(from: oldArray)
         }
     }
 }
