@@ -29,11 +29,6 @@ internal func PaulHeckelDifference<T: Diffable>(between fromArray: [T], and toAr
     // Find inserts, moves and updates
     for (i, ref) in info.NA.enumerated() {
         if let j = ref.index {
-            // Check if this object has changed
-            if toArray[i] != fromArray[j] {
-                steps.append(.update(value: toArray[i], index: i))
-            }
-
             // Checks for the current offset, if matches means that this move is not needed
             let expectedOldIndex = j + runningOffset + deleteOffsets[j]
             if expectedOldIndex != i {
@@ -41,6 +36,10 @@ internal func PaulHeckelDifference<T: Diffable>(between fromArray: [T], and toAr
                 if expectedOldIndex > i {
                     runningOffset += 1
                 }
+            }
+            // Check if this object has changed
+            if toArray[i] != fromArray[j] {
+                steps.append(.update(value: toArray[i], index: i))
             }
         } else {
             steps.append(.insert(value: toArray[i], index: i))
