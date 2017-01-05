@@ -1,6 +1,6 @@
 //
-//  DiffContext.swift
-//  PHDiff
+//  PaulHeckelDifference.swift
+//  PaulHeckelDifference
 //
 //  Created by Andre Alves on 10/13/16.
 //  Copyright © 2016 Andre Alves. All rights reserved.
