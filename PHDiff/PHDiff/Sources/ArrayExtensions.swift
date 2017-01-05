@@ -14,6 +14,15 @@ public enum DiffError<T: Diffable>: Error {
 
 extension Array where Element: Diffable {
     /**
+     Computes diffirance `self` from other array
+
+     Complexity: **O(n)**.
+     */
+    public func difference(from array: [Element]) -> [DiffStep<Element>] {
+        return PaulHeckelDifference(between: array, and: self)
+    }
+
+    /**
      Creates a new array by applying the diff steps.
 
      Complexity: **O(n)**.
