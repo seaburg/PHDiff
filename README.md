@@ -53,7 +53,7 @@ Depending of the installation method, you may need to import PHDiff in the files
 ```swift
 import PHDiff
 ```
-PHDiff provides two methods: **PHDiff.sortedSteps(fromArray:toArray:)** and **PHDiff.steps(fromArray:toArray:)** and they both return an array of DiffSteps:
+PHDiff provides method to Array: **array2.difference(from: array1)**  and they returns an array of DiffSteps:
 
 ```swift
 public enum DiffStep<T> {
@@ -64,23 +64,23 @@ public enum DiffStep<T> {
 }
 ```
 
-**PHDiff.sortedSteps(fromArray:toArray:)** calculates Inserts, Deletes and Updates in a sorted way that can be applied to the first array to transform it into the second array.
+Calculates Inserts, Deletes and Updates in a sorted way that can be applied to the first array to transform it into the second array.
 
 ```swift
 let a = ["a", "b", "c", "d"]
 let b = ["e", "a", "d"]
-let steps = PHDiff.sortedSteps(fromArray: a, toArray: b)
+let steps = a.difference(from: a)
 print(steps)
 //[Delete c at index: 2, Delete b at index: 1, Insert e at index: 0]
 print(a.apply(steps: steps))
 //["e", "a", "d"]
 ```
 
-**PHDiff.steps(fromArray:toArray:)** calculates Inserts, Deleted, Moves and Updates to be used only with batch operations (i.e: UITableView and UICollectionView batch updates).
+And calculates Inserts, Deleted, Moves and Updates to be used only with batch operations (i.e: UITableView and UICollectionView batch updates).
 
 ```swift
     private func updateTableView(newColors: [DemoColor]) {
-        let steps = PHDiff.steps(fromArray: self.colors, toArray: newColors)
+        let steps = newColors.difference(from: self.colors)
 
         if steps.count > 0 {
             tableView.beginUpdates()
@@ -112,12 +112,6 @@ print(a.apply(steps: steps))
         }
     }
 ```
-
-**Important:**
-
-- Both methods are linear in complexity and space.
-- Do **not** apply the result from steps(fromArray:toArray:) to the 'fromArray'. The result is not sorted in a way that it expects the indexes offset changes caused by each other step. If you need this type of result, use **sortedSteps** instead.
-
 
 In order to diff your models, they need to conform to the Diffable protocol:
 
