@@ -7,8 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8F29382F1E1F840800E17D94 /* Diffable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB4ECA61DB3E6D300FFA96B /* Diffable.swift */; };
+		8F2938301E1F840800E17D94 /* PaulHeckelDifference.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB4ECA71DB3E6D300FFA96B /* PaulHeckelDifference.swift */; };
+		8F2938311E1F840800E17D94 /* DiffStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB4ECA81DB3E6D300FFA96B /* DiffStep.swift */; };
+		8F2938331E1F840800E17D94 /* ArrayExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB4ECA51DB3E6D300FFA96B /* ArrayExtensions.swift */; };
+		8F2938361E1F840800E17D94 /* PHDiff.h in Headers */ = {isa = PBXBuildFile; fileRef = DEB4EC8D1DB3E63100FFA96B /* PHDiff.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8F2938401E1F848200E17D94 /* Diffable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB4ECA61DB3E6D300FFA96B /* Diffable.swift */; };
+		8F2938411E1F848200E17D94 /* PaulHeckelDifference.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB4ECA71DB3E6D300FFA96B /* PaulHeckelDifference.swift */; };
+		8F2938421E1F848200E17D94 /* DiffStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB4ECA81DB3E6D300FFA96B /* DiffStep.swift */; };
+		8F2938441E1F848200E17D94 /* ArrayExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB4ECA51DB3E6D300FFA96B /* ArrayExtensions.swift */; };
+		8F2938471E1F848200E17D94 /* PHDiff.h in Headers */ = {isa = PBXBuildFile; fileRef = DEB4EC8D1DB3E63100FFA96B /* PHDiff.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8F3E7E901E1EE70300B045E1 /* UITableViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3E7E8F1E1EE70300B045E1 /* UITableViewExtensions.swift */; };
 		8F3E7E921E1EEC9C00B045E1 /* UICollectionViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3E7E911E1EEC9C00B045E1 /* UICollectionViewExtension.swift */; };
+		8F70BE4F1E1EF33600F41FF5 /* Diffable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB4ECA61DB3E6D300FFA96B /* Diffable.swift */; };
+		8F70BE501E1EF33600F41FF5 /* PaulHeckelDifference.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB4ECA71DB3E6D300FFA96B /* PaulHeckelDifference.swift */; };
+		8F70BE511E1EF33600F41FF5 /* DiffStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB4ECA81DB3E6D300FFA96B /* DiffStep.swift */; };
+		8F70BE531E1EF33600F41FF5 /* ArrayExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB4ECA51DB3E6D300FFA96B /* ArrayExtensions.swift */; };
+		8F70BE561E1EF33600F41FF5 /* PHDiff.h in Headers */ = {isa = PBXBuildFile; fileRef = DEB4EC8D1DB3E63100FFA96B /* PHDiff.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DEB4EC941DB3E63200FFA96B /* PHDiff.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEB4EC8A1DB3E63100FFA96B /* PHDiff.framework */; };
 		DEB4EC991DB3E63200FFA96B /* PHDiffTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB4EC981DB3E63200FFA96B /* PHDiffTests.swift */; };
 		DEB4EC9B1DB3E63200FFA96B /* PHDiff.h in Headers */ = {isa = PBXBuildFile; fileRef = DEB4EC8D1DB3E63100FFA96B /* PHDiff.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -31,8 +46,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8F29383B1E1F840800E17D94 /* PHDiff.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PHDiff.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F29384C1E1F848200E17D94 /* PHDiff.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PHDiff.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F3E7E8F1E1EE70300B045E1 /* UITableViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewExtensions.swift; sourceTree = "<group>"; };
 		8F3E7E911E1EEC9C00B045E1 /* UICollectionViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UICollectionViewExtension.swift; sourceTree = "<group>"; };
+		8F70BE5B1E1EF33600F41FF5 /* PHDiff.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PHDiff.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEB4EC8A1DB3E63100FFA96B /* PHDiff.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PHDiff.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEB4EC8D1DB3E63100FFA96B /* PHDiff.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PHDiff.h; sourceTree = "<group>"; };
 		DEB4EC8E1DB3E63100FFA96B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -48,6 +66,27 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		8F2938341E1F840800E17D94 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F2938451E1F848200E17D94 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F70BE541E1EF33600F41FF5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DEB4EC861DB3E63100FFA96B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -89,6 +128,9 @@
 			children = (
 				DEB4EC8A1DB3E63100FFA96B /* PHDiff.framework */,
 				DEB4EC931DB3E63200FFA96B /* PHDiffTests.xctest */,
+				8F70BE5B1E1EF33600F41FF5 /* PHDiff.framework */,
+				8F29383B1E1F840800E17D94 /* PHDiff.framework */,
+				8F29384C1E1F848200E17D94 /* PHDiff.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -137,6 +179,30 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		8F2938351E1F840800E17D94 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F2938361E1F840800E17D94 /* PHDiff.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F2938461E1F848200E17D94 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F2938471E1F848200E17D94 /* PHDiff.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F70BE551E1EF33600F41FF5 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F70BE561E1EF33600F41FF5 /* PHDiff.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DEB4EC871DB3E63100FFA96B /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -148,9 +214,63 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		DEB4EC891DB3E63100FFA96B /* PHDiff */ = {
+		8F29382C1E1F840800E17D94 /* PHDiff tvOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DEB4EC9E1DB3E63200FFA96B /* Build configuration list for PBXNativeTarget "PHDiff" */;
+			buildConfigurationList = 8F2938381E1F840800E17D94 /* Build configuration list for PBXNativeTarget "PHDiff tvOS" */;
+			buildPhases = (
+				8F29382D1E1F840800E17D94 /* Sources */,
+				8F2938341E1F840800E17D94 /* Frameworks */,
+				8F2938351E1F840800E17D94 /* Headers */,
+				8F2938371E1F840800E17D94 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "PHDiff tvOS";
+			productName = PHDiff;
+			productReference = 8F29383B1E1F840800E17D94 /* PHDiff.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		8F29383D1E1F848200E17D94 /* PHDiff watchOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8F2938491E1F848200E17D94 /* Build configuration list for PBXNativeTarget "PHDiff watchOS" */;
+			buildPhases = (
+				8F29383E1E1F848200E17D94 /* Sources */,
+				8F2938451E1F848200E17D94 /* Frameworks */,
+				8F2938461E1F848200E17D94 /* Headers */,
+				8F2938481E1F848200E17D94 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "PHDiff watchOS";
+			productName = PHDiff;
+			productReference = 8F29384C1E1F848200E17D94 /* PHDiff.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		8F70BE4C1E1EF33600F41FF5 /* PHDiff macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8F70BE581E1EF33600F41FF5 /* Build configuration list for PBXNativeTarget "PHDiff macOS" */;
+			buildPhases = (
+				8F70BE4D1E1EF33600F41FF5 /* Sources */,
+				8F70BE541E1EF33600F41FF5 /* Frameworks */,
+				8F70BE551E1EF33600F41FF5 /* Headers */,
+				8F70BE571E1EF33600F41FF5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "PHDiff macOS";
+			productName = PHDiff;
+			productReference = 8F70BE5B1E1EF33600F41FF5 /* PHDiff.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		DEB4EC891DB3E63100FFA96B /* PHDiff iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DEB4EC9E1DB3E63200FFA96B /* Build configuration list for PBXNativeTarget "PHDiff iOS" */;
 			buildPhases = (
 				DEB4EC851DB3E63100FFA96B /* Sources */,
 				DEB4EC861DB3E63100FFA96B /* Frameworks */,
@@ -161,7 +281,7 @@
 			);
 			dependencies = (
 			);
-			name = PHDiff;
+			name = "PHDiff iOS";
 			productName = PHDiff;
 			productReference = DEB4EC8A1DB3E63100FFA96B /* PHDiff.framework */;
 			productType = "com.apple.product-type.framework";
@@ -216,13 +336,37 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				DEB4EC891DB3E63100FFA96B /* PHDiff */,
+				DEB4EC891DB3E63100FFA96B /* PHDiff iOS */,
 				DEB4EC921DB3E63200FFA96B /* PHDiffTests */,
+				8F70BE4C1E1EF33600F41FF5 /* PHDiff macOS */,
+				8F29382C1E1F840800E17D94 /* PHDiff tvOS */,
+				8F29383D1E1F848200E17D94 /* PHDiff watchOS */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		8F2938371E1F840800E17D94 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F2938481E1F848200E17D94 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F70BE571E1EF33600F41FF5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DEB4EC881DB3E63100FFA96B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -240,6 +384,39 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		8F29382D1E1F840800E17D94 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F29382F1E1F840800E17D94 /* Diffable.swift in Sources */,
+				8F2938301E1F840800E17D94 /* PaulHeckelDifference.swift in Sources */,
+				8F2938311E1F840800E17D94 /* DiffStep.swift in Sources */,
+				8F2938331E1F840800E17D94 /* ArrayExtensions.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F29383E1E1F848200E17D94 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F2938401E1F848200E17D94 /* Diffable.swift in Sources */,
+				8F2938411E1F848200E17D94 /* PaulHeckelDifference.swift in Sources */,
+				8F2938421E1F848200E17D94 /* DiffStep.swift in Sources */,
+				8F2938441E1F848200E17D94 /* ArrayExtensions.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F70BE4D1E1EF33600F41FF5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F70BE4F1E1EF33600F41FF5 /* Diffable.swift in Sources */,
+				8F70BE501E1EF33600F41FF5 /* PaulHeckelDifference.swift in Sources */,
+				8F70BE511E1EF33600F41FF5 /* DiffStep.swift in Sources */,
+				8F70BE531E1EF33600F41FF5 /* ArrayExtensions.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DEB4EC851DB3E63100FFA96B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -268,12 +445,148 @@
 /* Begin PBXTargetDependency section */
 		DEB4EC961DB3E63200FFA96B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = DEB4EC891DB3E63100FFA96B /* PHDiff */;
+			target = DEB4EC891DB3E63100FFA96B /* PHDiff iOS */;
 			targetProxy = DEB4EC951DB3E63200FFA96B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		8F2938391E1F840800E17D94 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = PHDiff/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.andre.alves.PHDiff;
+				PRODUCT_NAME = PHDiff;
+				SDKROOT = appletvos10.1;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Debug;
+		};
+		8F29383A1E1F840800E17D94 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = PHDiff/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.andre.alves.PHDiff;
+				PRODUCT_NAME = PHDiff;
+				SDKROOT = appletvos10.1;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Release;
+		};
+		8F29384A1E1F848200E17D94 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = PHDiff/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.andre.alves.PHDiff;
+				PRODUCT_NAME = PHDiff;
+				SDKROOT = watchos3.1;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		8F29384B1E1F848200E17D94 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = PHDiff/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.andre.alves.PHDiff;
+				PRODUCT_NAME = PHDiff;
+				SDKROOT = watchos3.1;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		8F70BE591E1EF33600F41FF5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = PHDiff/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_BUNDLE_IDENTIFIER = com.andre.alves.PHDiff;
+				PRODUCT_NAME = PHDiff;
+				SDKROOT = macosx10.12;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		8F70BE5A1E1EF33600F41FF5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = PHDiff/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_BUNDLE_IDENTIFIER = com.andre.alves.PHDiff;
+				PRODUCT_NAME = PHDiff;
+				SDKROOT = macosx10.12;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 		DEB4EC9C1DB3E63200FFA96B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -387,7 +700,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.andre.alves.PHDiff;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = PHDiff;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 			};
@@ -407,7 +720,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.andre.alves.PHDiff;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = PHDiff;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 			};
@@ -440,6 +753,33 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		8F2938381E1F840800E17D94 /* Build configuration list for PBXNativeTarget "PHDiff tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8F2938391E1F840800E17D94 /* Debug */,
+				8F29383A1E1F840800E17D94 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8F2938491E1F848200E17D94 /* Build configuration list for PBXNativeTarget "PHDiff watchOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8F29384A1E1F848200E17D94 /* Debug */,
+				8F29384B1E1F848200E17D94 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8F70BE581E1EF33600F41FF5 /* Build configuration list for PBXNativeTarget "PHDiff macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8F70BE591E1EF33600F41FF5 /* Debug */,
+				8F70BE5A1E1EF33600F41FF5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		DEB4EC841DB3E63100FFA96B /* Build configuration list for PBXProject "PHDiff" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -449,7 +789,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DEB4EC9E1DB3E63200FFA96B /* Build configuration list for PBXNativeTarget "PHDiff" */ = {
+		DEB4EC9E1DB3E63200FFA96B /* Build configuration list for PBXNativeTarget "PHDiff iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DEB4EC9F1DB3E63200FFA96B /* Debug */,
