@@ -65,19 +65,6 @@ final class PHDiffTests: XCTestCase {
         newArray = ["b", "c", "c"]
         steps = newArray.difference(from: oldArray)
         XCTAssertEqual(steps, [ DiffStep.delete(value: "a", index: 0), DiffStep.insert(value: "c", index: 2) ])
-
-        oldArray = ["a", "b", "c"]
-        newArray = ["c", "a", "b"]
-        steps = newArray.difference(from: oldArray)
-        XCTAssertEqual(steps, [ DiffStep.move(value: "c", fromIndex: 2, toIndex: 0)])
-
-        oldArray = ["a", "b", "c"]
-        newArray = ["b", "c", "a"]
-        steps = newArray.difference(from: oldArray)
-        XCTAssertEqual(steps, [
-            DiffStep.move(value: "b", fromIndex: 1, toIndex: 0),
-            DiffStep.move(value: "c", fromIndex: 2, toIndex: 1),
-        ])
     }
 
     func testApplyDiffWithBadInsertIndexSteps() {
@@ -176,7 +163,7 @@ final class PHDiffTests: XCTestCase {
         newArray = [TestUser(name: "1", age: 0), TestUser(name: "2", age: 1)]
         steps = newArray.difference(from: oldArray)
         expectedSteps = [.update(value: TestUser(name: "2", age: 1), index: 1)]
-        XCTAssertTrue(steps == expectedSteps)
+        XCTAssertEqual(steps, expectedSteps)
         XCTAssertEqual(try! oldArray.apply(steps: steps), newArray, "simple update")
     }
 

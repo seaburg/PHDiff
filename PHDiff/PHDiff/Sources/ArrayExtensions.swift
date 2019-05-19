@@ -19,7 +19,7 @@ extension Array where Element: Diffable {
      Complexity: **O(n)**.
      */
     public func difference(from array: [Element]) -> [DiffStep<Element>] {
-        return PaulHeckelDifference(between: array, and: self)
+        return PaulHeckelDifference().difference(from: array, to: self)
     }
 
     /**

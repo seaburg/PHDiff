@@ -13,7 +13,7 @@ public extension UICollectionView {
      Updates senction items via diff steps
      @warning should be used within `performBatchUpdates` block
     **/
-    public func ph_updateSection<T: Diffable>(_ section: Int, steps: [DiffStep<T>]) {
+    public func ph_updateSection<T>(_ section: Int, steps: [DiffStep<T>]) {
         if steps.count == 0 {
             return;
         }
